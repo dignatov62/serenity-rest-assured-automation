@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+    id 'java'
+}
+
+group 'io.github.zaz600'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
+    testImplementation('junit:junit:4.13.2')
+    implementation('net.serenity-bdd:serenity-junit:3.1.1')
+    implementation('net.serenity-bdd:serenity-rest-assured:3.1.1')
+    implementation("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
+    testImplementation("org.slf4j:slf4j-simple:1.7.32")
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.21.0'
+    compileJava.options.encoding = 'UTF-8'
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}
