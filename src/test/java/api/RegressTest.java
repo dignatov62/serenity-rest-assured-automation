@@ -1,21 +1,10 @@
 package api;
 
-import io.restassured.RestAssured;
-import io.restassured.http.Cookies;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
-import org.junit.Assert;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
-
-import net.serenitybdd.junit.runners.SerenityRunner;
-import org.junit.runner.RunWith;
-import pojos.AttrsItem;
-import pojos.Response;
-
-import java.util.List;
 
 public class RegressTest {
     @Test

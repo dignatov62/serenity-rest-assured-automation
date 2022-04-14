@@ -11,15 +11,19 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
+    implementation('org.jetbrains.kotlin:kotlin-stdlib:1.6.20')
     testImplementation('junit:junit:4.13.2')
-    implementation('net.serenity-bdd:serenity-junit:3.1.1')
-    implementation('net.serenity-bdd:serenity-rest-assured:3.1.1')
+    implementation('net.serenity-bdd:serenity-junit:3.2.3')
+    implementation('net.serenity-bdd:serenity-rest-assured:3.2.3')
     implementation("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
-    testImplementation("org.slf4j:slf4j-simple:1.7.32")
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+    // https://mvnrepository.com/artifact/com.google.zxing/javase
+    implementation group: 'com.google.zxing', name: 'javase', version: '3.4.1'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+    testImplementation('org.slf4j:slf4j-simple:1.7.36')
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.2.2'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.21.0'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.22.0'
     compileJava.options.encoding = 'UTF-8'
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
